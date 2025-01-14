@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
 import axiosInstance from '../config/axiosInstance';
+import { createStackNavigator } from '@react-navigation/stack';
+import DetailScreen from '../screens/DetailScreen'; // Pastikan Anda mengimpor DetailScreen
+
+const Stack = createStackNavigator();
 
 const HomeScreen = ({ navigation }) => {
     const [movies, setMovies] = useState([]);
@@ -35,7 +39,7 @@ const HomeScreen = ({ navigation }) => {
                 </View>
             </View>
         </TouchableOpacity>
-    )
+    );
 
     return (
         <View className="flex-1 bg-black pt-8">
@@ -49,4 +53,11 @@ const HomeScreen = ({ navigation }) => {
     );
 };
 
-export default HomeScreen;
+const HomeStack = () => (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Detail" component={DetailScreen} />
+    </Stack.Navigator>
+);
+
+export default HomeStack;
