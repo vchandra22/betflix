@@ -40,7 +40,7 @@ const HomeScreen = ({ navigation }) => {
 
     const renderCarouselItem = ({ item }) => (
         <TouchableOpacity
-            className="mr-4 bg-gray-800 rounded-lg overflow-hidden"
+            className="mr-4 mb-4 bg-gray-800 rounded-lg overflow-hidden"
             onPress={() => navigation.navigate('Detail', { movieId: item.id })}
         >
             <Image
@@ -96,7 +96,7 @@ const HomeScreen = ({ navigation }) => {
 
     return (
         <ScrollView className="flex-1 bg-black pt-8">
-            <Text className="text-white text-4xl font-bold m-4">Film Terpopuler</Text>
+            <Text className="text-white text-4xl font-bold my-4">Film Terpopuler</Text>
             <FlatList
                 data={mostViewed}
                 renderItem={renderCarouselItem}

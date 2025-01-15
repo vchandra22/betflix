@@ -3,9 +3,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from '../screens/HomeScreen';
 import DetailScreen from '../screens/DetailScreen';
-import CartScreen from '../screens/HomeScreen';
+import CartScreen from '../screens/CartScreen';
 import ProfileScreen from '../screens/HomeScreen';
-import SettingsScreen from '../screens/HomeScreen';
+import SettingsScreen from '../screens/SettingScreen';
 import { Ionicons } from '@expo/vector-icons'; // Ganti dengan library ikon yang Anda gunakan
 
 const Tab = createBottomTabNavigator();
